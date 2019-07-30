@@ -1,25 +1,15 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import { Header } from "./pages/header.js";
-// import { DetailPage } from "./pages/detail.js";
-// import { Footer } from "./pages/footer.js";
+import { BrowserRouter, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import DetailPage from "./pages/detail";
+import Footer from "./pages/footer";
 
-// function Header() {
-//   return (
-//     <div>
-//       <h2>Header</h2>
-//     </div>
-//   );
-// }
-
-function App() {
+export default function App() {
   return (
-    <Router path="/">
-      <Route path="/" component={Header} />
-      {/* <Route component={DetailPage} />
-      <Route component={Footer} /> */}
-    </Router>
+    <BrowserRouter>
+      <Route exact path="/" component={Home} />
+      <Route exact path="/" component={DetailPage} />
+      {/* <Route exact path="/" component={Footer} /> */}
+    </BrowserRouter>
   );
 }
-
-export default App;
