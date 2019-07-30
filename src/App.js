@@ -9,7 +9,7 @@ export default function App() {
     <BrowserRouter>
       <Route exact path="/" component={Home} />
       <Route exact path="/" component={DetailPage} />
-      {/* <Route exact path="/" component={Footer} /> */}
+      <Route exact path="/" component={Footer} />
     </BrowserRouter>
   );
 }
